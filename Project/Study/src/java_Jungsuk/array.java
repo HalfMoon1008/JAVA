@@ -1,3 +1,5 @@
+package java_Jungsuk;
+
 import java.util.Arrays;
 
 public class array {
@@ -45,23 +47,40 @@ public class array {
 		//저장값 확인하는 방법
 			//for를 이용한 방법
 			System.out.printf("[for를 이용한 배열의 값 확인]\n");
-			for(int i=0; i<ex1.length; i++) {
+			long st1 = System.nanoTime();
+			for(int i=0; i<ex1.length; i++) {	//본문
 				System.out.printf("%d ",ex1[i]);
 			}
+			
+			long et1 = System.nanoTime();
+			long elapsedTime = et1 - st1;
+			System.out.println("\n경과시간 : " + elapsedTime);
 			//결과값 : 10 20 30 40 50 
 		
+			
 			//Arrays.toString()를 사용하는 방법		_	배열의 모습을 확인하는 느낌
 			System.out.printf("\n\n[Arrays.toString 이용한 배열의 값 확인]\n");
-			System.out.println(Arrays.toString(ex1));
+			long st2 = System.nanoTime();
+			
+			System.out.println(Arrays.toString(ex1));	//	본문
+			
+			long et2 = System.nanoTime();
+			long elapsedTime2 = et2 - st2;
+			System.out.println("경과시간 : " + elapsedTime2);
 			//결과값 : [10, 20, 30, 40, 50]
 		
+			
+			
+			
 		
 		//배열 복사
 			//for를 이용한 방법
+			System.out.printf("\n[for를 이용한 배열 복사]\n");
 			int [] score = new int[5];
 			for(int i=0; i<score.length; i++){	//	score배열에 점수를 입력
 				score[i] = 100 - (i*10);
 			}
+			System.out.println(Arrays.toString(score));
 			
 			int [] dupl = new int [score.length*2];	// 기존 배열보다 길이가 2배인 배열 생성
 			for(int i=0; i<score.length; i++) {
@@ -69,8 +88,8 @@ public class array {
 			}
 			
 			score = dupl;		//	참조변수 score이 dupl을 가리키게 한다.
-			System.out.printf("\n[for를 이용한 배열 복사]\n");
-			System.out.println(Arrays.toString(score));
+			System.out.println(Arrays.toString(dupl));
+			
 			
 			//System.arraycopy()를 이용한 복사
 			//사용 형식 : System.arraycopy(참조 배열의 이름, 참조 배열의 복사 시작 인덱스, 목표 배열의 이름, 목표 배열의 복사 시작 인덱스, 복사할 배열 값의 수);
