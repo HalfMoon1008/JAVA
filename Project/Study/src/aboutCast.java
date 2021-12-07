@@ -32,7 +32,7 @@ public class aboutCast {
 	    System.out.println("Casting to Integer: "+i);
 
 	    long lo = in+4;				// i+4는 int형 값인데 long형 변수 l에 저장
-	    System.out.println("Casting to Long: "+l);
+	    System.out.println("Casting to Long: "+lo);
 	}
 
 }
