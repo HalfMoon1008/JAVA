@@ -9,7 +9,7 @@ public class arrayEx2 {
 
 		
 		//좌표에 X표하기 20~
-		System.out.printf("좌표에 x표 하기\n");
+		System.out.printf("[좌표에 x표 하기]\n");
 			final int SIZE = 10;
 			int x = 0, y = 0;
 	
@@ -64,7 +64,7 @@ public class arrayEx2 {
 			
 			
 		//빙고
-			System.out.printf("\n빙고\n");
+			System.out.printf("\n[빙고]\n");
 			final int SIZE1 = 5;
 			int x1 = 0 , y1 = 0;
 			int num = 0;
@@ -119,7 +119,7 @@ public class arrayEx2 {
 			
 			
 		//행렬의 곱셈
-			System.out.printf("\n행렬의 곱셈\n");
+			System.out.printf("\n[행렬의 곱셈]\n");
 			int[][] m1 = {
 					{1, 2, 3},
 					{4, 5, 6}
@@ -160,7 +160,7 @@ public class arrayEx2 {
 			
 			
 		//단어 맞추기
-				System.out.printf("\n단어 맞추기\n");
+				System.out.printf("\n[단어 맞추기]\n");
 				String[][] words = {
 						{"chair","의자"},			// words[0][0], words[0][1]
 						{"computer","컴퓨터"},	// words[1][0], words[1][1]

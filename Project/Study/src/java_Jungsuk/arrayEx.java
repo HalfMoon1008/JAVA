@@ -9,7 +9,7 @@ public class arrayEx {
 
 		
 		//총합과 평균
-			System.out.printf("총합과 평균\n");
+			System.out.printf("[총합과 평균]\n");
 			int sum =0;				// 총점을 저장하기 위한 변수
 			float average = 0f;		// 평균을 저장하기 위한 변수
 	
@@ -27,7 +27,7 @@ public class arrayEx {
 		
 		
 		//최대값과 최소값
-			System.out.printf("\n최대값과 최소값 구하기\n");
+			System.out.printf("\n[최대값과 최소값 구하기]\n");
 			int[] randomNum = new int[6];
 			for(int i = 0; i<randomNum.length; i++) {
 				randomNum[i] = (int)(Math.random()*100)+1;
@@ -72,7 +72,7 @@ public class arrayEx {
 		
 		
 		//로또 번호 생성
-			System.out.printf("\n\n로또 번호 생성 _ 속도 테스트1\n");
+			System.out.printf("\n\n[로또 번호 생성 _ 속도 테스트1]\n");
 			long st1 = System.nanoTime();		//코드 수행 시간 확인을 위한 시작 시점 체크 포인트
 			
 			int[] ball = new int[45];  // 45개의 정수값을 저장하기 위한 배열 생성.      
@@ -110,7 +110,7 @@ public class arrayEx {
 			
 			
 			
-			System.out.printf("\n로또 번호 생성 _ 속도 테스트2\n");
+			System.out.printf("\n[로또 번호 생성 _ 속도 테스트2]\n");
 			long st2 = System.nanoTime();		
 		
 			int[] ball2 = new int[45];       
@@ -150,7 +150,7 @@ public class arrayEx {
 			
 			
 			
-			System.out.printf("\n로또 번호 생성 _ 속도 테스트3\n");
+			System.out.printf("\n[로또 번호 생성 _ 속도 테스트3]\n");
 			long st3 = System.nanoTime();
 		
 			int[] ball3 = new int[45];
@@ -210,7 +210,7 @@ public class arrayEx {
 			
 			
 		//임의의 값으로 배열 채우기
-			System.out.printf("\n임의의 값으로 배열 채우기\n");
+			System.out.printf("\n[임의의 값으로 배열 채우기]\n");
 			int[] code = { -4, -1, 3, 6, 11 };  // 불연속적인 값들로 구성된 배열
 			int[] arr = new int[10];
 
@@ -225,7 +225,7 @@ public class arrayEx {
 		
 		
 		//정렬하기
-			System.out.printf("\n정렬하기\n");
+			System.out.printf("\n[정렬하기]\n");
 			int[] numArr2 = new int[20];
 
 			for (int i=0; i < numArr2.length ; i++ ) {
@@ -256,7 +256,7 @@ public class arrayEx {
 		
 		
 		//빈도수 구하기
-			System.out.printf("\n빈도수 구하기\n");
+			System.out.printf("\n[빈도수 구하기]\n");
 			int[] numArr3  = new int[10];
 			int[] counter = new int[10];
 
