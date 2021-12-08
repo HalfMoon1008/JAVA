@@ -136,6 +136,103 @@ public class array {
 			System.out.printf("\n[예제 1-3의 결과값]\n");
 			System.out.println(Arrays.toString(test2));
 
-	}
+			
+			
+			
+
+			//2차원 배열
+			//사용 형식 : int [] [] score = new int [4][3];
+			// score(0x100)		0				1				2
+			//		0		score[0][0]		score[0][1]		score[0][2]		-		score[0] 0x200
+			//		1		score[1][0]		score[1][1]		score[1][2]		-		score[1] 0x300
+			//		2		score[2][0]		score[2][1]		score[2][2]		-		score[2] 0x400
+			//		3		score[3][0]		score[3][1]		score[3][2]		-		score[3] 0x500
+			
+			//선언과 동시에 초기화
+			//int [] [] score = {
+			//						{100, 90, 80}
+			//						{70 , 60, 50}
+			//						{40 , 30, 20}
+			//					}
+			// 
+			// score(0x100)		0				1				2
+			//		0			100				90				80
+			//		1			70				60				50
+			//		2			40				30				20
+			
+			
+			//for문을 이용한 초기화
+			//int [] [] score = new int [4][3]
+			//for (int i = 0; i<score.length; i++) {
+			//	for (int j = 0; j<score[i].length; j++) {
+			//		score [i][j] = 10;
+			//	}
+			//}
+			
+			System.out.printf("\n[2차원 배열 예제]\n");
+			int[][] score2 = { 
+								{ 100, 95, 90 }, 
+								{ 85, 80, 75 }, 
+								{ 70, 65, 60 }, 
+								{ 55, 50, 45 } 
+							};
+			int sum = 0;
+
+			for (int i = 0; i < score2.length; i++) {
+				for (int j = 0; j < score2[i].length; j++) {
+					System.out.printf("score[%d][%d]=%d%n", i, j, score2[i][j]);
+				}
+			}
+
+			for (int[] tmp : score2) {
+				for (int i : tmp) {
+					sum += i;
+				}
+			}
+
+			System.out.println("sum=" + sum);
+
+	
+			
+			
+			
+			//가변 배열
+			//배열 안에 불규칙한 배열을 넣는 것
+			
+			int [] [] score3 = new int[5][];
+			score3[0] = new int [4];
+			score3[1] = new int [3];
+			score3[2] = new int [2];
+			score3[3] = new int [2];
+			score3[4] = new int [3];
+			
+			
+			System.out.printf("\n[가변 배열 예제]\n");
+			int [] [] score4 = {
+					{100, 80, 20, 50,80}
+				   ,{30,40,80,60}
+				   ,{100,100,90}
+				   ,{100,90,80}
+				   ,{30,80,95,70}
+			};
+			
+			for (int i = 0; i < score4.length; i++) {
+				for (int j = 0; j < score4[i].length; j++) {
+					System.out.printf("%d\t",score4[i][j]);
+				}
+				System.out.println();
+			}
+
+			// score4(0x100)		0				1				2				3				4
+			//		0				100				80				20				50				80
+			//		1				30				40				80				60
+			//		2				100				100				90
+			//		2				100				90				80
+			//		2				30				80				95				70
+			
+			
+			
+			
+	}	//main 함수 종료
 
 }
