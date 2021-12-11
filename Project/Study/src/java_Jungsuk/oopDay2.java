@@ -17,7 +17,8 @@ public class oopDay2 {
 		// Ex) 트럼프 카드
 		// static - 카드의 폭과 높이
 		// instance - 카드의 무늬와 숫자
-		
+	
+		System.out.printf("[Static & Instance]\n");
 		System.out.println("Card.width = "  + Card.width);
 		System.out.println("Card.height = " + Card.height);
 
@@ -49,15 +50,47 @@ public class oopDay2 {
 		System.out.println("c2는 " + c2.kind + ", " + c2.number + "이며, 크기는 (" + c2.width + ", " + c2.height + ")" );
 		
 		
+		
+		
+		//재귀호출
+		int  n = 10;
+		long result = 0;
+
+		for(int i = 1; i <= n; i++) {
+			result = FactorialTest2.factorial(i);
+			//스텍 쌓이는거 참고
+			
+			
+			if(result==-1) {
+				System.out.printf("유효하지 않은 값입니다.(0<n<=20):%d%n", n);
+				break;
+			}
+
+			System.out.printf("%2d!=%20d%n", i, result);
+		}
+		
+		
 	} //main 끝
 		
 } //class 끝
 
 
-
+//카드 예시 _ 클래스와 메서드의 변수
 class Card {
 	String kind ;				// 카드의 무늬 - 인스턴스 변수
 	int number;				    // 카드의 숫자 - 인스턴스 변수
 	static int width = 100;		// 카드의 폭  - 클래스 변수
 	static int height = 250;	// 카드의 높이 - 클래스 변수
 } // card 클래스 끝
+
+
+
+// 재귀호출
+class FactorialTest2 {
+	static long factorial(int n) {
+		if(n<=0 || n>20) return -1;  // 매개변수의 유효성 검사.
+		if(n<=1) 
+			 return 1;
+	    return n * factorial(n-1); 
+	}
+}
