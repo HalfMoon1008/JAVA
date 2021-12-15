@@ -150,6 +150,8 @@ class Car2 {
 		this.color    = color;
 		this.gearType = gearType;
 		this.door     = door;
+		
+// 블록 초기화 예제
 	}
 }
 
